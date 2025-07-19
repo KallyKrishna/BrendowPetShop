@@ -1,0 +1,31 @@
+.em-construcao {
+  text-align: center;
+  padding: 60px 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.em-construcao h2 {
+  font-size: 2em;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 15px;
+}
+
+.em-construcao p {
+  font-size: 1.1em;
+  max-width: 500px;
+  margin: 0 auto 30px;
+}
+
+.carrossel-imagens img {
+  max-width: 180px;
+  height: auto;
+  animation: fadeIn 1s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
