@@ -1,0 +1,272 @@
+/* Usa variáveis do style.css para padronizar cores e fontes */
+
+/* Fundo com blur e escurecedor */
+.fundo-completo {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.fundo-completo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("../IMAGENS/WALLPAPER.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(0.3px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+.fundo-completo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 116, 150, 0.4);
+  z-index: 0;
+}
+
+/* Menu patinha */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.menu-btn img {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(3px 3px 1px rgba(250, 249, 249, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.menu-btn img:hover {
+  transform: scale(1.1);
+}
+
+/* Submenu */
+.submenu {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: rgba(16, 114, 170, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(248, 246, 246, 0.3);
+  text-align: right;
+}
+
+.submenu.mostrar {
+  display: block;
+}
+
+.submenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu a {
+  color: var(--branco);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--fonte-seria);
+  font-size: 16px;
+}
+
+/* Menu Lateral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to right, #ffeb8a, #b4d9ff);
+  color: #333;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-lateral {
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  border-right: 2px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+}
+
+.menu-lateral .logo {
+  width: 100%;
+  max-width: 180px;
+  margin-bottom: 20px;
+}
+
+.menu-lateral button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background-color: #ffe066;
+  border: none;
+  border-radius: 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-lateral button:hover {
+  background-color: #ffd43b;
+}
+
+.conteudo {
+  flex-grow: 1;
+  padding: 30px;
+  position: relative;
+  animation: fadein 0.5s ease;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.conteudo .tema {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.conteudo .tema img {
+  width: 150px;
+  max-width: 100%;
+}
+
+.conteudo .tema p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.mensagem-inicial {
+  font-size: 1.2em;
+  color: #666;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+.menu-lateral {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.cartao-tema {
+  display: flex;
+  align-items: center;
+  background-color: #ffffffdd;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  gap: 20px;
+}
+
+.cartao-tema:hover {
+  transform: scale(1.02);
+}
+
+.avatar-tema {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffd700;
+}
+
+.texto-tema h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.texto-tema p {
+  font-size: 1.05em;
+  color: #333;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .cartao-tema {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .avatar-tema {
+    margin-bottom: 12px;
+  }
+
+  .texto-tema h3 {
+    font-size: 1.3em;
+  }
+
+  .texto-tema p {
+    font-size: 1em;
+  }
+}
+
+
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--branco);
+  line-height: 1.4;
+  background: transparent;
+  padding: 20px 10px;
+}
+
+footer p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 6px;
+}
+
+/*  RESPONSIVO RODAPÉ*/
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}

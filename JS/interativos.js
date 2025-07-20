@@ -31,8 +31,17 @@ let indexAtual = 0;
 const imgElement = document.getElementById("imgConstrucao");
 
 function trocarImagem() {
-  indexAtual = (indexAtual + 1) % imagens.length;
-  imgElement.src = imagens[indexAtual];
+  imgElement.classList.add("fade"); // Aplica fade-out
+
+  setTimeout(() => {
+    indexAtual = (indexAtual + 1) % imagens.length;
+    imgElement.src = imagens[indexAtual];
+
+    imgElement.onload = () => {
+      imgElement.classList.remove("fade"); // Aplica fade-in após nova imagem carregar
+    };
+  }, 500); // Tempo do fade-out
 }
+
 
 setInterval(trocarImagem, 2000); // troca a cada 2 segundos
