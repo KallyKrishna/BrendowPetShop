@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nós | PetShop do Brendow</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
-  <!-- Importa os estilos gerais e específicos -->
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="CSS/style.css" />
   <link rel="stylesheet" href="CSS/nos.css" />
-  
+
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&family=Ruda:wght@400;700&family=Sugar+Pie&display=swap" rel="stylesheet" />
-  
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Fundo Papel de Parede com blur -->
+  <!-- Fundo com blur -->
   <div class="fundo-completo"></div>
 
-  <!-- Menu hamburguer (patinha) -->
+  <!-- Menu patinha -->
   <div class="menu-btn" onclick="toggleSubmenu()">
     <img src="IMAGENS/MENU.webp" alt="Menu" />
   </div>
@@ -33,14 +33,14 @@
       <li><a href="nos.html" target="_blank" onclick="fecharSubmenu()">Nós</a></li>
       <li><a href="https://www.google.com/search?q=Pet+Shop+do+Brendow" target="_blank" onclick="fecharSubmenu()">Google</a></li>
       <li><a href="duvidas.html" target="_blank" onclick="fecharSubmenu()">Dúvidas</a></li>
-      <li><a href="contato.html" target="_blank" onclick="fecharSubmenu()">Contato</a></li>      
+      <li><a href="contato.html" target="_blank" onclick="fecharSubmenu()">Contato</a></li>
       <li><a href="localizacao.html" target="_blank" onclick="fecharSubmenu()">Localização</a></li>
       <li><a href="termos.html" target="_blank" onclick="fecharSubmenu()">Termos e Políticas</a></li>
     </ul>
   </nav>
 
-<!-- Menu Lateral -->
-<div class="container">
+  <!-- Menu Lateral Esquerdo -->
+  <div class="container">
     <aside class="menu-lateral">
       <img src="IMAGENS/LOGO.webp" alt="Logo PetShop" class="logo" />
       <button onclick="mostrarConteudo('historia')">História</button>
@@ -50,66 +50,17 @@
       <button onclick="mostrarConteudo('mascotes')">Mascotes</button>
     </aside>
 
-    <section class="conteudo" id="conteudo">
-
-      <!-- Cartão dinâmico descritivo -->
-      <div class="cartao-tema" id="historia" style="display: none;">
-  <img src="IMAGENS/ICOBrendow.webp" alt="História" class="avatar-tema" />
-  <div class="texto-tema">
-    <h3>História</h3>
-    <p>
-      Apaixonado por animais desde a infância…<br>
-      Com 17 anos, começa a se dedicar aos pets de pequeno porte…<br>
-      Aos 25, realiza o sonho de ter seu próprio pet shop…<br>
-      Está sempre se aperfeiçoando…<br>
-      Transparência, dedicação, zelo e organização…
-    </p>
+    <!-- Área onde o conteúdo será injetado -->
+    <section class="conteudo" id="conteudo-principal"></section>
   </div>
-</div>
 
-<div class="cartao-tema" id="visao" style="display: none;">
-  <img src="IMAGENS/ICOYork1.webp" alt="Visão" class="avatar-tema" />
-  <div class="texto-tema">
-    <h3>Visão</h3>
-    <p>Nossa visão é transformar o cuidado com pets em uma experiência única, com carinho e confiança.</p>
-  </div>
-</div>
-
-<div class="cartao-tema" id="missao" style="display: none;">
-  <img src="IMAGENS/ICOCat.webp" alt="Missão" class="avatar-tema" />
-  <div class="texto-tema">
-    <h3>Missão</h3>
-    <p>Proporcionar bem-estar, segurança e alegria para os pets e seus tutores todos os dias.</p>
-  </div>
-</div>
-
-<div class="cartao-tema" id="valores" style="display: none;">
-  <img src="IMAGENS/ICOPug.webp" alt="Valores" class="avatar-tema" />
-  <div class="texto-tema">
-    <h3>Valores</h3>
-    <p>Ética, transparência, amor pelos animais, profissionalismo e responsabilidade social.</p>
-  </div>
-</div>
-
-<div class="cartao-tema" id="mascotes" style="display: none;">
-  <img src="IMAGENS/ICOYork2.webp" alt="Mascotes" class="avatar-tema" />
-  <div class="texto-tema">
-    <h3>Mascotes</h3>
-    <p>Conheça nossos mascotes que tornam nosso dia mais feliz! 🐶🐱</p>
-  </div>
-</div>
-
-  <script src="JS/nos.js"></script>
-</body>
-</html>
-
-    <!-- Rodapé simples -->
-  <footer>
+  <!-- Rodapé -->
+  <footer class="rodape-nos">
     <p>© 2025 PetShop do Brendow</p>
     <p>by ∆X∆K¥</p>
   </footer>
 
-
+  <!-- JS -->
   <script src="JS/interativos.js" defer></script>
 </body>
 </html>
