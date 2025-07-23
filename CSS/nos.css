@@ -1,31 +1,23 @@
 /* Usa variáveis do style.css para padronizar cores e fontes */
 
-/* Fundo com blur e escurecedor */
-.fundo-completo {
-  position: fixed;
-  inset: 0;
-  z-index: -10;
-  overflow: hidden;
-}
-
+/* FUNDO COM IMAGEM */
 .fundo-completo::before {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: url("../IMAGENS/WALLPAPER.webp") no-repeat center center;
   background-size: cover;
-  background-attachment: fixed;
-  filter: blur(0.3px);
+  filter: blur(4px);
   transform: scale(1.05);
-  z-index: -1;
+  z-index: -2;
 }
 
 .fundo-completo::after {
   content: '';
-  position: absolute;
+  position: fixed;
   inset: 0;
-  background: rgba(29, 116, 150, 0.4);
-  z-index: 0;
+  background: rgba(29, 116, 150, 0);
+  z-index: -1;
 }
 
 /* Menu Patinha */
@@ -33,14 +25,18 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  background: none;
+  border: none;
   z-index: 1001;
   cursor: pointer;
+  filter: drop-shadow(4px 4px 1px rgba(255, 255, 254, 0.801));
+  transition: transform 0.2s ease;
 }
 
 .menu-btn img {
   width: 55px;
   height: 55px;
-  filter: drop-shadow(3px 3px 1px rgba(250, 249, 249, 0.4));
+  filter: drop-shadow(2px 2px 4px rgba(250, 249, 249, 0.4));
   transition: transform 0.2s ease;
 }
 
@@ -97,7 +93,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px;
+  padding: 0px;
 }
 
 .menu-lateral {
@@ -106,16 +102,16 @@ body {
   margin: 0;
   box-sizing: border-box;
   width: 250px;
-  padding: 30px;
+  padding: 5px;
   text-align: center;
-  border-right: 2px solid #ddd;
   box-shadow: 2px 0 5px rgba(0,0,0,0.05);
 }
 
 .menu-lateral .logo {
-  width: 100%;
+  width: 50%;
   max-width: 180px;
   margin-bottom: 20px;
+  filter: drop-shadow(3px 3px 1px rgba(238, 203, 6, 0.616));
 }
 
 .menu-lateral button {
@@ -123,19 +119,19 @@ body {
   width: 100%;
   margin: 10px 0;
   padding: 12px;
-  background: rgba(255, 255, 254, 0.171);
+  background: rgba(214, 177, 12, 0.171);
   text-decoration: none;
   color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
   border: none;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 1.5em;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .menu-lateral button:hover {
-  background-color: #4a90e2;
+  background-color: #F8D25C;
 }
 
 .conteudo {
@@ -148,6 +144,58 @@ body {
 @keyframes fadein {
   from { opacity: 0; transform: translateX(20px); }
   to { opacity: 1; transform: translateX(0); }
+}
+
+/* Caixa de texto */
+.secao-historia {
+  background: rgba(5, 48, 99, 0.137);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 30px;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 4px 12px rgba(230, 196, 4, 0.753);
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.titulo-historia {
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 35px;
+  font-family: var(--fonte-destaque);
+  color: var(--amarelo);
+  text-shadow: 2px 2px 4px #000;
+}
+
+.conteudo-historia {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.imagem-historia {
+  width: 200px;
+}
+
+.conteudo-historia p {
+  flex: 1;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Animação */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 
@@ -166,7 +214,7 @@ footer p {
   margin-bottom: 6px;
 }
 
-/*  RESPONSIVO RODAPÉ*/
+/* RESPONSIVO MOBILE ATÉ 480px */
 @media (max-width: 480px) {
   .container-menu {
     justify-content: center;
@@ -176,9 +224,76 @@ footer p {
     width: 50%;
     max-width: none;
     position: relative;
-  
+  }
+
   footer {
     font-size: 12px;
     line-height: 1.3;
   }
+}
+
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
   }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .menu-lateral {
+    width: 100%;
+    padding: 10px 0;
+    order: 1;
+  }
+
+  .conteudo {
+    width: 100%;
+    padding: 10px;
+    order: 2;
+  }
+
+  .secao-historia {
+    padding: 20px;
+    margin-top: 5px;
+    top: 70px;
+    width: 100%;;
+  }
+
+  .conteudo-historia {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .imagem-historia {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+
+  .titulo-historia {
+    font-size: 2.5em;
+  }
+
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animar-fadeDown {
+  animation: fadeDown 0.5s ease-out;
+}
+}

@@ -58,6 +58,8 @@ body {
   border: none;
   z-index: 1001;
   cursor: pointer;
+  filter: drop-shadow(4px 4px 1px rgba(255, 255, 254, 0.801));
+  transition: transform 0.2s ease;
 }
 
 .menu-btn img {
@@ -174,7 +176,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 20px;
-  background: rgba(255, 255, 254, 0.171);
+  background: rgba(2214, 177, 12, 0.37);
   border-radius: 20px;
   backdrop-filter: blur(2px);
   text-decoration: none;
@@ -204,6 +206,7 @@ body {
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
+
 
 /* Animação flutuacao */
 @keyframes flutuar {
