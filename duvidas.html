@@ -18,10 +18,10 @@
 </head>
 <body>
 
-  <!-- Fundo Papel de Parede com blur -->
+  <!-- FUNDO Papel de Parede com blur -->
   <div class="fundo-completo"></div>
 
-  <!-- Menu hamburguer (patinha) -->
+  <!-- MENU hamburguer (patinha) -->
   <div class="menu-btn" onclick="toggleSubmenu()">
     <img src="IMAGENS/MENU.webp" alt="Menu" />
   </div>
@@ -40,27 +40,109 @@
   </nav>
 
 
-  <!-- Logo centralizada -->
+  <!-- LOGO centralizada -->
   <header>
     <img class="logo" src="IMAGENS/LOGO.webp" alt="Logo PetShop do Brendow" />
   </header>
 
-  <!-- Conteúdo principal -->
-  <section class="em-construcao">
-    <h2>🐾 Em Construção...</h2>
-    <p>Estamos preparando esta área com muito carinho! Em breve, você poderá explorar todas as novidades por aqui.</p>
-    <div class="carrossel-imagens">
-      <img id="imgConstrucao" src="IMAGENS/ICOBrendow.webp" alt="Pet em construção" />
-    </div>
-  </section>
+  <!-- TITULO principal da sessao FAQ -->
+<section class="faq" id="duvidas">
+  <h2 class="titulo"><span class="titulo">Dúvidas Frequentes</span></h2>
+
+  <!-- FAQ -->
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Qual o horário de funcionamento?</button>
+    <div class="faq-resposta">
+  <p>
+    De segunda a sexta, das 9h às 18h.<br>
+    E aos sábados, das 9h às 16h.<br>
+    Não atendemos domingos e feriados.
+  </p></div>
+</div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">É necessário agendar horário?</button>
+    <div class="faq-resposta"><p>Sim, recomendamos o agendamento como garantia de melhor atendimento.<br>
+      Você pode agendar pelo WhatsApp, telefone ou presencialmente.</p></div>
+  </div>
+
+ <div class="faq-item">
+    <button class="faq-pergunta estiloso">Quais serviços são oferecidos?</button>
+    <div class="faq-resposta"><p>Banho, tosa, táxi dog, venda de produtos e muito mais!</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Quais formas de pagamento vocês aceitam?</button>
+    <div class="faq-resposta"><p>Pix, débito, crédito e dinheiro. Desde que acordado de forma antecipada.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Posso acompanhar meu pet durante o atendimento?</button>
+    <div class="faq-resposta"><p>Sim! Queremos que você se sinta seguro. Temos um espaço para isso.<br>
+    Ou, se preferir, pode acompanhar de forma remota através das lives em nossas redes sociais.<br>
+    Consulte-nos para maiores informações.</p></div>
+  </div>
+
+    <div class="faq-item">
+    <button class="faq-pergunta estiloso">Utilizam produtos naturais?</button>
+    <div class="faq-resposta"><p>Sim, nós também temos serviços exclusivos com linhas de shampoos e produtos hipoalergênicos, veganos e naturais.<br>
+    Saiba mais na sessão nossos serviços.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Animais agressivos podem ser atendidos?</button>
+    <div class="faq-resposta"><p>Sim, mas devemos ser informados antecipadamente para tomarmos os cuidados necessários.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Vocês atendem em domicílio?</button>
+    <div class="faq-resposta"><p>Infelizmente, não oferecemos a possibilidade de atendimento dos nossos serviços in loco.<br>
+      Mas, oferecemos o serviço de táxi dog.<br>
+      Saiba mais, clicando aqui.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Tem planos mensais para banho e tosa?</button>
+    <div class="faq-resposta"><p>Sim, consulte nossos pacotes promocionais mensais!</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Animais exóticos também são atendidos?</button>
+    <div class="faq-resposta"><p>Atualmente atendemos apenas coelhos.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">A tosa é feita com máquina ou tesoura?</button>
+    <div class="faq-resposta"><p>Trabalhamos com os dois tipos, de acordo com o que for melhor para o pet.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Posso comprar produtos pelo site?</button>
+    <div class="faq-resposta"><p>Ainda não, mas aceitamos pedidos pelo WhatsApp com entrega local.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-pergunta estiloso">Tem programa de fidelidade?</button>
+    <div class="faq-resposta"><p>Sim! A cada 6(seis) serviços você ganha um brinde ou banho gratuito.</p></div>
+  </div>
+  
+  <!-- Botão final -->
+  <div class="faq-contato">
+    <a href="https://wa.me/5512997633527" target="_blank" class="botao-whats">Não encontrou sua dúvida? Fale com o Brendow no WhatsApp 🐾</a>
+  </div>
+</section>
+
 
   <!-- Rodapé simples -->
   <footer>
     <p>© 2025 PetShop do Brendow</p>
-    <p>by ∆X∆K¥</p>
   </footer>
 
 
-  <script src="JS/interativos.js" defer></script>
+  <script src="JS/duvidas.js" defer></script>
+
+<!-- Botão Voltar ao Topo -->
+<button id="btnTopo" title="Voltar ao topo">↑</button>
+
 </body>
 </html>

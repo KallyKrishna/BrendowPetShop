@@ -96,6 +96,7 @@ if (secao === "valores") {
         <img src="IMAGENS/Brendow1.webp" alt="Valores" class="imagem-historia">
       </div>
     </div>
+    
   `;
 }
 
@@ -124,9 +125,6 @@ if (secao === "mascotes") {
     </div>
   `;
 }
-
-
-
 
   if (window.innerWidth <= 480) {
     // MOBILE: insere logo após o botão clicado
