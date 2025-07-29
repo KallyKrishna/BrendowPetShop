@@ -11,6 +11,44 @@
 </head>
 <body>
 
+<!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- BLOCO 1 - Tela de Consentimento de Cookies -->
+<div id="cookie-consent" class="cookie-popup">
+  <div class="cookie-box">
+    <h2>🍪 Preferências de Cookies</h2>
+    <p>Usamos cookies para melhorar sua experiência no PetShop do Brendow. Você pode aceitar todos, recusar ou personalizar.</p>
+
+    <div class="cookie-buttons">
+      <button id="acceptAll">Aceitar Todos</button>
+      <button id="rejectAll">Recusar</button>
+      <button id="editPreferences">Editar Preferências</button>
+    </div>
+  </div>
+
+  <div class="cookie-preferences hidden">
+    <h3>Configurações de Cookies</h3>
+    <label>
+      <input type="checkbox" disabled checked />
+      Cookies Essenciais (obrigatórios)
+    </label>
+    <label>
+      <input type="checkbox" id="analytics" />
+      Cookies de Análise
+    </label>
+    <label>
+      <input type="checkbox" id="marketing" />
+      Cookies de Marketing
+    </label>
+    <div class="cookie-buttons">
+      <button id="savePreferences">Salvar Preferências</button>
+    </div>
+  </div>
+</div>
+
   <!-- Fundo Papel de Parede -->
   <div class="fundo-completo"></div>
 
@@ -50,7 +88,7 @@
 </div>
 
 
-  <!-- Bolhas das redes sociais -->
+<!-- Bolhas das redes sociais -->
   <div class="redes-sociais">
     <a href="https://www.facebook.com/pet.shop.do.brendow" target="_blank">
       <div class="bolha facebook" title="Facebook">

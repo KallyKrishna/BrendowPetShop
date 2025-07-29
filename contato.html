@@ -46,13 +46,28 @@
   </header>
 
   <!-- Conteúdo principal -->
-  <section class="em-construcao">
-    <h2>🐾 Em Construção...</h2>
-    <p>Estamos preparando esta área com muito carinho! Em breve, você poderá explorar todas as novidades por aqui.</p>
-    <div class="carrossel-imagens">
-      <img id="imgConstrucao" src="IMAGENS/ICOBrendow.webp" alt="Pet em construção" />
+ <main class="contato-container">
+  <section class="formulario-contato">
+    <h2>Fale Conosco</h2>
+    <form id="formContato" onsubmit="enviarWhatsApp(event)">
+      <input type="text" name="nome" placeholder="Seu Nome" required />
+      <input type="tel" name="telefone" placeholder="Telefone com DDD" required />
+      <input type="email" name="email" placeholder="Seu E-mail" required />
+      <input type="text" name="assunto" placeholder="Assunto" required />
+      <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+      <button type="submit"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="redes-mapa">
+    <h3>Ou, se preferir:</h3>
+    <div class="icones-sociais">
+      <a href="https://www.instagram.com/petshopdobrendow" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/pet.shop.do.brendow" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://maps.app.goo.gl/T5p5GhUUxSg6LxEP6" target="_blank" title="Como Chegar"><i class="fas fa-map-marker-alt"></i></a>
     </div>
   </section>
+</main>
 
 
   <!-- Rodapé simples -->
@@ -62,6 +77,9 @@
   </footer>
 
 
-  <script src="JS/interativos.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+  <script src="JS/contato.js" defer></script>
+
 </body>
 </html>

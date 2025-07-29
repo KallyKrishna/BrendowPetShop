@@ -1,6 +1,13 @@
 /* Usa variáveis do style.css para padronizar cores e fontes */
 
 /* FUNDO COM IMAGEM */
+.fundo-completo {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+}
+
 .fundo-completo::before {
   content: '';
   position: fixed;

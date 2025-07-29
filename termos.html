@@ -3,25 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Termos e Politicas | PetShop do Brendow</title>
+  <title>Termos | PetShop do Brendow</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
-  <!-- Importa os estilos gerais e específicos -->
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="CSS/style.css" />
   <link rel="stylesheet" href="CSS/termos.css" />
-  
+
   <!-- Fontes -->
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&family=Ruda:wght@400;700&family=Sugar+Pie&display=swap" rel="stylesheet" />
-  
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-</head>
-<body>
 
-  <!-- Fundo Papel de Parede com blur -->
+  <!-- Fundo com blur -->
   <div class="fundo-completo"></div>
 
-  <!-- Menu hamburguer (patinha) -->
+  <!-- Menu patinha -->
   <div class="menu-btn" onclick="toggleSubmenu()">
     <img src="IMAGENS/MENU.webp" alt="Menu" />
   </div>
@@ -33,34 +28,33 @@
       <li><a href="nos.html" target="_blank" onclick="fecharSubmenu()">Nós</a></li>
       <li><a href="https://www.google.com/search?q=Pet+Shop+do+Brendow" target="_blank" onclick="fecharSubmenu()">Google</a></li>
       <li><a href="duvidas.html" target="_blank" onclick="fecharSubmenu()">Dúvidas</a></li>
-      <li><a href="contato.html" target="_blank" onclick="fecharSubmenu()">Contato</a></li>      
+      <li><a href="contato.html" target="_blank" onclick="fecharSubmenu()">Contato</a></li>
       <li><a href="localizacao.html" target="_blank" onclick="fecharSubmenu()">Localização</a></li>
       <li><a href="termos.html" target="_blank" onclick="fecharSubmenu()">Termos e Políticas</a></li>
     </ul>
   </nav>
 
+  <!-- Menu Lateral Esquerdo -->
+  <div class="container">
+    <aside class="menu-lateral">
+      <img src="IMAGENS/LOGO.webp" alt="Logo PetShop" class="logo" />
+      <button onclick="mostrarConteudo('termos')"> Termos de Uso</button>
+      <button onclick="mostrarConteudo('privacidade')">Política de Privacidade</button>
+      <button onclick="mostrarConteudo('cookies')">Política de Cookies</button>
+      <button onclick="mostrarConteudo('cancelamento')">Política de Cancelamento</button>
+    </aside>
 
-  <!-- Logo centralizada -->
-  <header>
-    <img class="logo" src="IMAGENS/LOGO.webp" alt="Logo PetShop do Brendow" />
-  </header>
+    <!-- Área onde o conteúdo será injetado -->
+    <section class="conteudo" id="conteudo-principal"></section>
+  </div>
 
-  <!-- Conteúdo principal -->
-  <section class="em-construcao">
-    <h2>🐾 Em Construção...</h2>
-    <p>Estamos preparando esta área com muito carinho! Em breve, você poderá explorar todas as novidades por aqui.</p>
-    <div class="carrossel-imagens">
-      <img id="imgConstrucao" src="IMAGENS/ICOBrendow.webp" alt="Pet em construção" />
-    </div>
-  </section>
-
-  <!-- Rodapé simples -->
-  <footer>
+  <!-- Rodapé -->
+  <footer class="rodape-nos">
     <p>© 2025 PetShop do Brendow</p>
     <p>by ∆X∆K¥</p>
   </footer>
 
-
-  <script src="JS/interativos.js" defer></script>
+  <!-- JS -->
+  <script src="JS/termos.js" defer></script>
 </body>
 </html>

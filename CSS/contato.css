@@ -12,10 +12,10 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url("../IMAGENS/FUNDOManu.webp") no-repeat center center;
+  background: url("../IMAGENS/WALLPAPER.webp") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(0.3px);
+  filter: blur(4px);
   transform: scale(1.05);
   z-index: -1;
 }
@@ -24,7 +24,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(29, 116, 150, 0.4);
+  background: rgba(29, 116, 150, 0);
   z-index: 0;
 }
 
@@ -93,73 +93,96 @@
   font-size: 16px;
 }
 
-/* Sessão Em Construção */
-.em-construcao {
-  max-width: 600px;
-  margin: 40px auto 80px auto;
+/* Conteúdo Principal */
+.contato-container {
+  max-width: 700px;
+  margin: 20px auto 60px auto;
   padding: 20px;
+  background: rgba(5, 48, 99, 0.137);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
   text-align: center;
+  font-family: var(--fonte-padrao);
+}
+
+.formulario-contato h2 {
+  font-size: 4em;
   color: var(--amarelo);
-  font-family: var(--fonte-divertida);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  margin-bottom: 20px;
+  font-family: var(--fonte-destaque);
+  text-shadow: 1px 1px 3px #000;
 }
 
-.em-construcao h2 {
-  font-size: 2.2em;
-  margin-bottom: 15px;
+.formulario-contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.em-construcao p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffffcc;
+  font-size: 1em;
+  resize: none;
+}
+
+.formulario-contato button {
+  padding: 12px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background: #1da851;
+}
+
+.redes-mapa {
+  margin-top: 40px;
+}
+
+.redes-mapa h3 {
   color: var(--branco);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  font-family: var(--fonte-divertida);
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
-/* Carrossel de imagens */
-.carrossel-imagens img {
-  max-width: 180px;
-  height: auto;
-  animation: fadeIn 1s ease-in-out;
-  transition: opacity 0.5s ease-in-out;
+.icones-sociais a {
+  font-size: 2em;
+  margin: 0 10px;
+  color: var(--branco);
+  transition: transform 0.3s, color 0.3s;
 }
 
-.fade {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.icones-sociais a:hover {
+  transform: scale(1.2);
+  color: var(--amarelo);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Responsividade simples */
 @media (max-width: 480px) {
-  .em-construcao {
-    padding: 10px;
-    margin: 20px auto 40px auto;
+  .contato-container {
+    margin: 10px;
+    padding: 15px;
   }
-  
-  .em-construcao h2 {
-    font-size: 1.6em;
+
+  .formulario-contato h2 {
+    font-size: clamp(2.7em, 5vw, 3em);
   }
-  
-  .em-construcao p {
+
+  .formulario-contato button {
     font-size: 1em;
   }
-  
-  .carrossel-imagens img {
-    max-width: 140px;
-  }
 }
-
 
 /* RODAPÉ */
 footer {
