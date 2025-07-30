@@ -42,7 +42,7 @@ function mostrarConteudo(secao) {
             É proibido usar este site para fins ilegais ou não autorizados. Reservamo-nos o direito de modificar estes termos a qualquer momento, sendo responsabilidade do usuário consultá-los periodicamente.
             Todos os direitos de imagens, textos e conteúdos são protegidos por lei. Qualquer violação pode resultar em medidas legais.
           </p>
-          <img src="IMAGENS/ICOCat.webp" alt="Ícone Gato" class="imagem-termos">
+          <img src="IMAGENS/ICOCat.webp" alt="Ícone Termos" class="imagem-termos">
         </div>
       </div>
     `;
@@ -74,7 +74,7 @@ function mostrarConteudo(secao) {
             Você pode controlar e/ou desativar cookies nas configurações do seu navegador. No entanto, ao desativá-los, certas funcionalidades do site podem não funcionar corretamente.
             Ao continuar navegando, você concorda com o uso de cookies conforme descrito nesta política.
           </p>
-          <img src="IMAGENS/ICOPug.webp" alt="Ícone Cookies" class="imagem-historia">
+          <img src="IMAGENS/ICOPug.webp" alt="Ícone Cookies" class="imagem-cookies">
         </div>
       </div>
     `;
@@ -89,7 +89,7 @@ function mostrarConteudo(secao) {
             Para reagendamentos ou cancelamentos de serviços, solicitamos que o cliente entre em contato com, no mínimo, 24 horas de antecedência. Cancelamentos fora desse prazo poderão ser cobrados parcial ou integralmente, a depender do serviço contratado.
             Em casos de arrependimento, o reembolso e/ou reclamação só será atendido até o prazo máximo de 24 horas após a compra, conforme o Código de Defesa do Consumidor. Após esse prazo, a devolução poderá ser convertida em crédito para uso futuro, em produtos e/ou serviços da loja, à critério do cliente.
           </p>
-          <img src="IMAGENS/ICOYork2.webp" alt="Ícone Cancelamento" class="imagem-historia">
+          <img src="IMAGENS/ICOYork2.webp" alt="Ícone Cancelamento" class="imagem-cancelamento">
         </div>
       </div>
     `;
@@ -110,3 +110,13 @@ function mostrarConteudo(secao) {
     container.innerHTML = conteudoHTML;
   }
 }
+
+// Ao carregar a página, verifica se há uma seção na URL
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const secao = params.get('secao');
+
+  if (secao) {
+    mostrarConteudo(secao);
+  }
+});
