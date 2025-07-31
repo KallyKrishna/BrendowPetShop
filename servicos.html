@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Localização • PetShop do Brendow</title>
-  <link rel="stylesheet" href="CSS/localizacao.css" />
+  <title>Serviços • PetShop do Brendow</title>
+  <link rel="stylesheet" href="CSS/servicos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&family=Ruda:wght@400;700&family=Sugar+Pie&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -31,28 +31,32 @@
     </ul>
   </nav>
 
-
-  <!-- Logo -->
-    <img src="IMAGENS/LOGO.webp" alt="Logo PetShop do Brendow" class="logo-topo">
-
   <!-- Título -->
   <div class="titulo">
-    <span class="parte1">Como chegar em nossa</span>
-    <span class="parte2">fonte de AUmor 🐾</span>
+    <span class="parte1">Cuidados, carinhos e muito AUmor</span>
+    <span class="parte2">para os nossos melhores AUmigos 🐾</span>
   </div>
 
-  <!-- Bolhas de localização -->
-  <div class="opcoes-localizacao">
-    <a href="https://maps.app.goo.gl/T5p5GhUUxSg6LxEP6" target="_blank" class="opcao">
-      <img src="IMAGENS/ICOCat.webp" alt="Maps App">
-      <span>Maps</span>
-    </a>
-    <a href="https://waze.com/ul/h6gzkhgsju" target="_blank" class="opcao">
-      <img src="IMAGENS/ICOPug.webp" alt="Waze">
-      <span>Waze</span>
-    </a>
+  <!-- Botões Bolha Serviços -->
+<section class="servicos-bolhas">
+  <div class="bolha" onclick="mostrarServico('banho')">
+    <img src="IMAGENS/ICOPug.webp" alt="Banho & Tosa" />
+    <span>Banho & Tosa</span>
   </div>
-  
+  <div class="bolha" onclick="mostrarServico('mimos')">
+    <img src="IMAGENS/ICOYork2.webp" alt="Mimos & Cuidados" />
+    <span>Mimos & Cuidados</span>
+  </div>
+  <div class="bolha" onclick="mostrarServico('spa')">
+    <img src="IMAGENS/ICOYork1.webp" alt="Spa & Zen" />
+    <span>Spa & Zen</span>
+  </div>
+  <div class="bolha" onclick="mostrarServico('vet')">
+    <img src="IMAGENS/ICOCat.webp" alt="Vet & Farma" />
+    <span>Vet & Farma</span>
+  </div>
+</section>
+
 <script>
   function toggleSubmenu() {
     const submenu = document.getElementById("submenu");
@@ -73,6 +77,15 @@
   });
 </script>
 
+
+<!-- Quadro que aparece após o clique -->
+<section id="conteudo-servico" class="quadro-servico"></section>
+
+
+  <script src="JS/servicos.js"></script>
+</body>
+
+
 <!-- Rodapé simples -->
   <footer>
   <p>© 2025 PetShop do Brendow</p>
@@ -84,7 +97,6 @@
     <a href="termos.html?secao=cancelamento" target="_blank">Política de Cancelamento</a>
   </nav>
 </footer>
-
 
 </body>
 </html>

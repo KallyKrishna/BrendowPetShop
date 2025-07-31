@@ -1,0 +1,253 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+  --azul: #1274CC;
+  --amarelo: #F8D25C;
+  --branco: #ffffff;
+  --preto: #222222;
+
+  --fonte-destaque: 'Sugar Pie', cursive;
+  --fonte-divertida: 'Playpen Sans', cursive;
+  --fonte-seria: 'Ruda', sans-serif;
+}
+
+/* BODY */
+body {
+  font-family: var(--fonte-divertida);
+  background-color: #cdeaff;
+  color: var(--preto);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 20px;
+  text-align: center;
+}
+
+/* FUNDO COM IMAGEM */
+.fundo-completo::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("../IMAGENS/WALLPAPER.webp") no-repeat center center;
+  background-size: cover;
+  filter: blur(4px);
+  transform: scale(1.05);
+  z-index: -2;
+}
+
+.fundo-completo::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(29, 116, 150, 0);
+  z-index: -1;
+}
+
+/* MENU PATINHA */
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  z-index: 1001;
+  cursor: pointer;
+  filter: drop-shadow(4px 4px 1px rgba(255, 255, 254, 0.801));
+  transition: transform 0.2s ease;
+}
+
+.menu-btn img {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(2px 2px 4px rgba(250, 249, 249, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.menu-btn img:hover {
+  transform: scale(1.1);
+}
+
+/* SUBMENU */
+.submenu {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background: rgba(16, 114, 170, 0.342);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 15px 20px;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(248, 246, 246, 0.3);
+  transition: all 0.3s ease-in-out;
+  text-align: right;
+  }
+
+.submenu a {
+  color: var(--amarelo);
+  font-size: 16px;
+  font-family: var(--fonte-divertida);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.submenu.mostrar {
+  display: block;
+}
+
+.submenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.submenu a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--fonte-seria);
+}
+
+
+/* TÍTULO */
+.titulo {
+  text-align: center;
+  margin: 10px auto 25px auto;
+  line-height: 1.4;
+  color: var(--azul);
+  font-size: 2.3em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 1.7);
+}
+
+.titulo .parte1 {
+  font-family: var(--fonte-destaque);
+  display: block;
+  font-size: 1.0em;
+  font-weight: 300;
+  color: var(--branco);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5),
+    0 0 4px rgb(3, 41, 90);
+}
+
+.titulo .parte2 {
+  font-family: var(--fonte-divertida);
+  font-size: 0.7em;
+  color: var(--amarelo);
+  ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5),
+    0 0 4px rgb(3, 41, 90);
+  display: block;
+  margin-top: 5px;
+}
+
+/* BOTOES BOLHA SERVIÇOS */
+.servicos-bolhas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.bolha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.bolha img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background: rgba(2214, 177, 12, 0.37);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  padding: 10px;
+}
+
+.bolha span {
+  margin-top: 10px;
+  text-align: center;
+  font-family: var(--fonte-destaque);
+  color: var(--azul);
+  font-size: 1.1em;
+}
+
+.bolha:hover {
+  transform: scale(1.1);
+}
+
+.quadro-servico {
+  margin: 30px auto;
+  max-width: 800px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #00000022;
+  font-family: var(--fonte-padrao);
+  color: var(--azul);
+  text-align: center;
+}
+
+.mensagem-inicial {
+  color: #777;
+  font-style: italic;
+}
+
+/* Animação flutuacao */
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+
+  
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicos-bolhas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bolha {
+    width: 100px;
+  }
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--branco);
+  line-height: 1.4;
+  background: transparent;
+  padding: 20px 10px;
+}
+
+footer p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-bottom: 6px;
+}
+
+/*  RESPONSIVO RODAPÉ*/
+@media (max-width: 480px) {
+  footer {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
