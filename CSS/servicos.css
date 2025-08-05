@@ -119,6 +119,12 @@ body {
   font-family: var(--fonte-seria);
 }
 
+/* LOGO */
+.logo {
+  display: block;
+  margin: 10px auto 30px;
+  width: 160px;
+}
 
 /* TÍTULO */
 .titulo {
@@ -144,68 +150,60 @@ body {
   font-family: var(--fonte-divertida);
   font-size: 0.7em;
   color: var(--amarelo);
-  ttext-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5),
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5),
     0 0 4px rgb(3, 41, 90);
   display: block;
   margin-top: 5px;
 }
 
-/* BOTOES BOLHA SERVIÇOS */
+/* BOTOES BOLHAS SERVIÇOS */
 .servicos-bolhas {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 30px;
+  margin-top: 50px;
+  z-index: 10;
+  position: relative;
 }
 
 .bolha {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  justify-content: center;
   align-items: center;
-  width: 130px;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(2214, 177, 12, 0.37);
+  border-radius: 20px;
+  backdrop-filter: blur(2px);
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+  animation: flutuar 4s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
   cursor: pointer;
-  transition: transform 0.3s;
+  width: 100px;
 }
+
 
 .bolha img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  background: rgba(2214, 177, 12, 0.37);
   border-radius: 20px;
   backdrop-filter: blur(2px);
-  padding: 10px;
+  padding: 1px;
 }
 
 .bolha span {
-  margin-top: 10px;
-  text-align: center;
-  font-family: var(--fonte-destaque);
-  color: var(--azul);
-  font-size: 1.1em;
+  font-family: var(--fonte-seria);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
 
-.bolha:hover {
-  transform: scale(1.1);
-}
-
-.quadro-servico {
-  margin: 30px auto;
-  max-width: 800px;
-  background: white;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #00000022;
-  font-family: var(--fonte-padrao);
-  color: var(--azul);
-  text-align: center;
-}
-
-.mensagem-inicial {
-  color: #777;
-  font-style: italic;
-}
 
 /* Animação flutuacao */
 @keyframes flutuar {
@@ -215,8 +213,9 @@ body {
   100% {
     transform: translateY(-8px);
   }
+}
 
-  
+
 /* Responsivo */
 @media (max-width: 768px) {
   .servicos-bolhas {
@@ -228,6 +227,53 @@ body {
     width: 100px;
   }
 }
+
+/* Quadro de serviço (formulário) */
+.quadro-servico {
+  background: rgba(2214, 177, 12, 0.37);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  max-width: 320px;
+  margin: 20px auto 40px;
+  display: none;
+  font-family: var(--fonte-padrao);
+  color: var(--azul-escuro);
+}
+
+.formulario-agendamento label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.formulario-agendamento select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid var(--azul-medio);
+  font-size: 1em;
+}
+
+.formulario-agendamento button {
+  margin-top: 18px;
+  width: 100%;
+  background-color: var(--amarelo);
+  color: var(--azul-escuro);
+  border: none;
+  padding: 12px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-agendamento button:hover {
+  background-color: var(--amarelo-escuro);
+}
+
 
 /* RODAPÉ */
 footer {

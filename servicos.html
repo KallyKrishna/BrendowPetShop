@@ -31,11 +31,17 @@
     </ul>
   </nav>
 
+  <header>
+    <!-- Logo centralizada -->
+    <img class="logo" src="IMAGENS/LOGO.webp" alt="Logo PetShop do Brendow">
+  </header>
+
   <!-- Título -->
   <div class="titulo">
     <span class="parte1">Cuidados, carinhos e muito AUmor</span>
-    <span class="parte2">para os nossos melhores AUmigos 🐾</span>
+    <span class="parte2">para os nossos melhores AUmigos</span>
   </div>
+
 
   <!-- Botões Bolha Serviços -->
 <section class="servicos-bolhas">
@@ -57,8 +63,74 @@
   </div>
 </section>
 
+
+<!-- Quadro de Agendamento Simples -->
+<section id="agendamento-simples" class="quadro-servico">
+  <h2>Agendamento Rápido</h2>
+  <div class="formulario-agendamento">
+
+    <label for="servico">Serviço:</label>
+    <select id="servico" onchange="mostrarOpcoesTosa()">
+      <option value="">Selecione</option>
+      <option value="Banho">Banho</option>
+      <option value="Tosa">Tosa</option>
+      <option value="Banho & Tosa">Banho & Tosa</option>
+    </select>
+
+    <label for="tipoPet">Tipo de Pet:</label>
+    <select id="tipoPet">
+      <option value="">Selecione</option>
+      <option value="Cachorro">Cachorro</option>
+      <option value="Gato">Gato</option>
+      <option value="Coelho">Coelho</option>
+    </select>
+
+    <label for="porte">Porte:</label>
+    <select id="porte">
+      <option value="">Selecione</option>
+      <option value="PP">PP (Mini/Toy)</option>
+      <option value="P">P</option>
+      <option value="M">M</option>
+      <option value="G">G</option>
+    </select>
+
+    <label for="pelagem">Pelagem:</label>
+    <select id="pelagem">
+      <option value="">Selecione</option>
+      <option value="Curta">Curta</option>
+      <option value="Média">Média</option>
+      <option value="Semi-Longa">Semi-Longa</option>
+      <option value="Longa">Longa</option>
+    </select>
+
+
+    <!-- Campo extra para tipo de tosa -->
+    <div id="campo-tosa" style="display: none;">
+      <label for="tipoTosa">Tipo de Tosa:</label>
+      <select id="tipoTosa">
+        <option value="">Selecione</option>
+        <option value="Tosa na Tesoura">Tosa na Tesoura</option>
+        <option value="Tosa Bebê">Tosa Bebê</option>
+        <option value="Tosa com Máquina">Tosa com Máquina</option>
+      </select>
+      <p class="observacao">Todos os tipos de tosa incluem banho simples e corte de unha.</p>
+    </div>
+
+    <!-- Observação geral sobre os banhos -->
+    <p id="obs-banho" class="observacao" style="display: none;">
+      Todos os banhos incluem corte de unha e tosa higiênica (bumbum, patinhas e barriguinha).
+    </p>
+
+    <button onclick="event.stopPropagation(); enviarAgendamentoWhatsApp()">Agendar via WhatsApp</button>
+  </div>
+</section>
+
+<!-- Conteúdo Dinâmico do Serviço -->
+<section id="conteudo-servico" class="conteudo-servico"></section>
 <script>
-  function toggleSubmenu() {
+
+<!-- Função para abrir e fechar o submenu -->
+function toggleSubmenu() {
     const submenu = document.getElementById("submenu");
     submenu.classList.toggle("mostrar");
   }
@@ -76,11 +148,6 @@
     }
   });
 </script>
-
-
-<!-- Quadro que aparece após o clique -->
-<section id="conteudo-servico" class="quadro-servico"></section>
-
 
   <script src="JS/servicos.js"></script>
 </body>
