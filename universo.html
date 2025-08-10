@@ -43,7 +43,63 @@
     <img class="logo" src="IMAGENS/LOGO.webp" alt="Logo PetShop do Brendow" />
   </header>
 
-  <!-- Conteúdo principal -->
+  <!-- Jogos -->
+<h1>Jogos Interativos Tema Pet</h1>
+
+<nav>
+  <button class="active" onclick="mostrarJogo('quiz', this)">Quiz Pet</button>
+  <button onclick="mostrarJogo('velha', this)">Jogo da Velha</button>
+  <button onclick="mostrarJogo('memoria', this)">Jogo da Memória</button>
+  <button onclick="mostrarJogo('forca', this)">Forca Pet</button>
+</nav>
+
+<!-- 1. Quiz Pet -->
+<section id="quiz" class="jogo active">
+  <div id="quiz-container">
+    <div class="quiz-pergunta" id="quiz-pergunta"></div>
+    <div id="quiz-opcoes"></div>
+    <div class="quiz-resultado" id="quiz-resultado"></div>
+    <button class="btn-reiniciar" id="quiz-reiniciar" style="display:none;">Reiniciar Quiz</button>
+  </div>
+</section>
+
+<!-- 2. Jogo da Velha -->
+<section id="velha" class="jogo">
+  <div class="velha-info" id="velha-info">Turno: <span id="velha-turno">🐾</span></div>
+  <div class="velha-tabuleiro" id="velha-tabuleiro">
+    <div class="velha-celula" data-celula="0"></div>
+    <div class="velha-celula" data-celula="1"></div>
+    <div class="velha-celula" data-celula="2"></div>
+    <div class="velha-celula" data-celula="3"></div>
+    <div class="velha-celula" data-celula="4"></div>
+    <div class="velha-celula" data-celula="5"></div>
+    <div class="velha-celula" data-celula="6"></div>
+    <div class="velha-celula" data-celula="7"></div>
+    <div class="velha-celula" data-celula="8"></div>
+  </div>
+  <button class="btn-resetar" id="velha-resetar">Reiniciar Jogo</button>
+</section>
+
+<!-- 3. Jogo da Memória -->
+<section id="memoria" class="jogo">
+  <div class="memoria-tabuleiro" id="memoria-tabuleiro"></div>
+  <div class="memoria-info" id="memoria-info"></div>
+  <button class="btn-memoria-reset" id="memoria-reset">Reiniciar Memória</button>
+</section>
+
+<!-- 4. Forca Pet -->
+<section id="forca" class="jogo">
+  <div class="forca-container">
+    <div id="forca-dica" class="forca-dica"></div>
+    <div class="forca-palavra" id="forca-palavra"></div>
+    <div class="forca-letras" id="forca-letras"></div>
+    <div class="forca-info" id="forca-info"></div>
+    <button class="btn-forca-reset" id="forca-reset">Reiniciar Forca</button>
+  </div>
+</section>
+
+
+<!-- Conteúdo principal -->
   <section class="em-construcao">
     <h2>🐾 Em Construção...</h2>
     <p>Estamos preparando esta área com muito carinho! Em breve, você poderá explorar todas as novidades por aqui.</p>
