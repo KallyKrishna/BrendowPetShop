@@ -18,6 +18,7 @@ document.addEventListener("click", function(event) {
   }
 });
 
+// Função para exibir o conteúdo
 function mostrarConteudo(secao) {
   const container = document.getElementById("conteudo-principal");
   const jaExiste = document.getElementById("secao-" + secao);

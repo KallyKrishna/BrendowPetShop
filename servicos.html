@@ -42,112 +42,66 @@
     <span class="parte2">para os nossos melhores AUmigos</span>
   </div>
 
+<section id="nossos-servicos" class="servicos">
+  <div class="container">
+    <h2 class="titulo-secao">SERVIÇOS</h2>
 
-  <!-- Botões Bolha Serviços -->
-<section class="servicos-bolhas">
-  <div class="bolha" onclick="mostrarServico('banho')">
-    <img src="IMAGENS/ICOPug.webp" alt="Banho & Tosa" />
-    <span>Banho & Tosa</span>
-  </div>
-  <div class="bolha" onclick="mostrarServico('mimos')">
-    <img src="IMAGENS/ICOYork2.webp" alt="Mimos & Cuidados" />
-    <span>Mimos & Cuidados</span>
-  </div>
-  <div class="bolha" onclick="mostrarServico('spa')">
-    <img src="IMAGENS/ICOYork1.webp" alt="Spa & Zen" />
-    <span>Spa & Zen</span>
-  </div>
-  <div class="bolha" onclick="mostrarServico('vet')">
-    <img src="IMAGENS/ICOCat.webp" alt="Vet & Farma" />
-    <span>Vet & Farma</span>
-  </div>
-</section>
+    <div class="lista-servicos">
+      <div class="grupo-servico">Banhos</div>
+      <label><input type="checkbox" value="Banho Simples"> Banho Simples</label>
+      <label><input type="checkbox" value="Banho Hidratante"> Banho Hidratante</label>
+      <label><input type="checkbox" value="Banho Relaxante"> Banho Relaxante</label>
+      <label><input type="checkbox" value="Banho Ozonizado"> Banho Ozonizado</label>
+      <label><input type="checkbox" value="Banho Cromoterápico"> Banho Cromoterápico</label>
+      <label><input type="checkbox" value="Banho Aromático"> Banho Aromático</label>
 
+      <div class="grupo-servico">Tosas</div>
+      <label><input type="checkbox" value="Tosa na Tesoura"> Tosa na Tesoura</label>
+      <label><input type="checkbox" value="Tosa com Máquina"> Tosa com Máquina</label>
+      <label><input type="checkbox" value="Tosa Higiênica"> Tosa Higiênica</label>
+      <label><input type="checkbox" value="Tosa Bebê"> Tosa Bebê</label>
+      <label><input type="checkbox" value="Tosa Botinha"> Tosa Botinha</label>
 
-<!-- Quadro de Agendamento Simples -->
-<section id="agendamento-simples" class="quadro-servico">
-  <h2>Agendamento Rápido</h2>
-  <div class="formulario-agendamento">
+      <div class="grupo-servico">Hidratação</div>
+      <label><input type="checkbox" value="Hidratação Pelagem"> Hidratação de Pelagem</label>
+      <label><input type="checkbox" value="Hidratação Patinhas"> Hidratação de Patinhas</label>
+      <label><input type="checkbox" value="Hidratação Focinho"> Hidratação de Focinho</label>
 
-    <label for="servico">Serviço:</label>
-    <select id="servico" onchange="mostrarOpcoesTosa()">
-      <option value="">Selecione</option>
-      <option value="Banho">Banho</option>
-      <option value="Tosa">Tosa</option>
-      <option value="Banho & Tosa">Banho & Tosa</option>
-    </select>
-
-    <label for="tipoPet">Tipo de Pet:</label>
-    <select id="tipoPet">
-      <option value="">Selecione</option>
-      <option value="Cachorro">Cachorro</option>
-      <option value="Gato">Gato</option>
-      <option value="Coelho">Coelho</option>
-    </select>
-
-    <label for="porte">Porte:</label>
-    <select id="porte">
-      <option value="">Selecione</option>
-      <option value="PP">PP (Mini/Toy)</option>
-      <option value="P">P</option>
-      <option value="M">M</option>
-      <option value="G">G</option>
-    </select>
-
-    <label for="pelagem">Pelagem:</label>
-    <select id="pelagem">
-      <option value="">Selecione</option>
-      <option value="Curta">Curta</option>
-      <option value="Média">Média</option>
-      <option value="Semi-Longa">Semi-Longa</option>
-      <option value="Longa">Longa</option>
-    </select>
-
-
-    <!-- Campo extra para tipo de tosa -->
-    <div id="campo-tosa" style="display: none;">
-      <label for="tipoTosa">Tipo de Tosa:</label>
-      <select id="tipoTosa">
-        <option value="">Selecione</option>
-        <option value="Tosa na Tesoura">Tosa na Tesoura</option>
-        <option value="Tosa Bebê">Tosa Bebê</option>
-        <option value="Tosa com Máquina">Tosa com Máquina</option>
-      </select>
-      <p class="observacao">Todos os tipos de tosa incluem banho simples e corte de unha.</p>
+      <div class="grupo-servico">Outros</div>
+      <label><input type="checkbox" value="Desembolo"> Desembolo</label>
+      <label><input type="checkbox" value="Corte de Unha"> Corte de Unha</label>
+      <label><input type="checkbox" value="Táxi Dog"> Táxi Dog</label>
     </div>
 
-    <!-- Observação geral sobre os banhos -->
-    <p id="obs-banho" class="observacao" style="display: none;">
-      Todos os banhos incluem corte de unha e tosa higiênica (bumbum, patinhas e barriguinha).
-    </p>
+    <div class="form-servicos">
+      <select id="tipo-pet">
+        <option value="">Tipo de Pet</option>
+        <option value="Cachorro">Cachorro</option>
+        <option value="Gato">Gato</option>
+        <option value="Coelho">Coelho</option>
+      </select>
 
-    <button onclick="event.stopPropagation(); enviarAgendamentoWhatsApp()">Agendar via WhatsApp</button>
-  </div>
+      <select id="porte">
+        <option value="">Porte</option>
+        <option value="PP (Mini/Toy)">PP (Mini/Toy)</option>
+        <option value="P">P</option>
+        <option value="M">M</option>
+        <option value="G">G</option>
+      </select>
+
+      <select id="pelagem">
+        <option value="">Pelagem</option>
+        <option value="Longa">Longa</option>
+        <option value="Semi-Longa">Semi-Longa</option>
+        <option value="Média">Média</option>
+        <option value="Curta">Curta</option>
+      </select>
+
+      <button id="btn-agendar" class="btn-principal">Agendar pelo WhatsApp</button>
+    </div>
 </section>
 
-<!-- Conteúdo Dinâmico do Serviço -->
-<section id="conteudo-servico" class="conteudo-servico"></section>
-<script>
 
-<!-- Função para abrir e fechar o submenu -->
-function toggleSubmenu() {
-    const submenu = document.getElementById("submenu");
-    submenu.classList.toggle("mostrar");
-  }
-
-  function fecharSubmenu() {
-    const submenu = document.getElementById("submenu");
-    submenu.classList.remove("mostrar");
-  }
-
-  document.addEventListener("click", function(event) {
-    const submenu = document.getElementById("submenu");
-    const menuBtn = document.querySelector(".menu-btn");
-    if (!submenu.contains(event.target) && !menuBtn.contains(event.target)) {
-      submenu.classList.remove("mostrar");
-    }
-  });
-</script>
 
   <script src="JS/servicos.js"></script>
 </body>
@@ -165,5 +119,5 @@ function toggleSubmenu() {
   </nav>
 </footer>
 
-</body>
+
 </html>
